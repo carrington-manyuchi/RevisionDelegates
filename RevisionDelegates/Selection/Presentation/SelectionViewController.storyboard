@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Selection View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SelectionViewController" id="Y6W-OH-hqX" customClass="SelectionViewController" customModule="RevisionDelegates" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your device" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4p-AH-XDx">
+                                <rect key="frame" x="20" y="79" width="353" height="29.333333333333329"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YzL-KS-uG2">
+                                <rect key="frame" x="0.0" y="110.33333333333331" width="393" height="741.66666666666674"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="653-xb-WUf">
+                                        <rect key="frame" x="34.666666666666657" y="0.0" width="324" height="239"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ipad"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUc-Bt-epa">
+                                        <rect key="frame" x="34.666666666666657" y="251.33333333333337" width="324" height="239"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="iPhone"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQl-t6-aha">
+                                        <rect key="frame" x="34.666666666666657" y="502.66666666666674" width="324" height="239"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="mac"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="u4p-AH-XDx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="Lrv-Jv-Hcj"/>
+                            <constraint firstItem="YzL-KS-uG2" firstAttribute="top" secondItem="u4p-AH-XDx" secondAttribute="bottom" constant="2" id="e1V-ng-VNJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="u4p-AH-XDx" secondAttribute="trailing" constant="20" id="hys-He-O1G"/>
+                            <constraint firstItem="u4p-AH-XDx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="ikk-GF-gQM"/>
+                            <constraint firstItem="YzL-KS-uG2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="jne-DL-ped"/>
+                            <constraint firstAttribute="bottom" secondItem="YzL-KS-uG2" secondAttribute="bottom" id="kwP-hS-gLi"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YzL-KS-uG2" secondAttribute="trailing" id="pwr-3L-0nH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chooseYourDeviceLabel" destination="u4p-AH-XDx" id="kYE-EB-OwM"/>
+                        <outlet property="selectedIPadDevice" destination="653-xb-WUf" id="EWX-V0-iXb"/>
+                        <outlet property="selectedMacDevice" destination="HQl-t6-aha" id="I0N-Le-YK9"/>
+                        <outlet property="selectediPhoneDevice" destination="nUc-Bt-epa" id="m1w-CL-eE6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="313.74045801526717" y="0.70422535211267612"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iPhone" width="300" height="225"/>
+        <image name="ipad" width="300" height="225"/>
+        <image name="mac" width="300" height="225"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

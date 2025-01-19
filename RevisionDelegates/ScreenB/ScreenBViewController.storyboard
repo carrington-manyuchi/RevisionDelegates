@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ScreenB View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ScreenBViewController" id="Y6W-OH-hqX" customClass="ScreenBViewController" customModule="RevisionDelegates" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zAN-Lq-97J">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sta-eg-NMe">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="281"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ipad"/>
+                                        <connections>
+                                            <action selector="iPadDeviceTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4NE-lQ-xtb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laL-as-rys">
+                                        <rect key="frame" x="0.0" y="281" width="393" height="239"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="iPhone"/>
+                                        <connections>
+                                            <action selector="iPhoneDeviceTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="IdD-BV-VTP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UF0-sL-zbK">
+                                        <rect key="frame" x="0.0" y="520" width="393" height="239"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="mac"/>
+                                        <connections>
+                                            <action selector="MacDeviceTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ccv-gv-IgX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zAN-Lq-97J" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="2kn-cl-83b"/>
+                            <constraint firstItem="zAN-Lq-97J" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="FFb-qC-vFM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zAN-Lq-97J" secondAttribute="trailing" id="XSb-s5-mSJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="zAN-Lq-97J" secondAttribute="bottom" id="cl8-sm-Ucr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MacDevice" destination="UF0-sL-zbK" id="HK2-J7-cgv"/>
+                        <outlet property="iPadDevice" destination="Sta-eg-NMe" id="74B-zl-J6g"/>
+                        <outlet property="iPhoneDevice" destination="laL-as-rys" id="KZZ-Qh-1Xd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iPhone" width="300" height="225"/>
+        <image name="ipad" width="300" height="225"/>
+        <image name="mac" width="300" height="225"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -33,19 +33,6 @@ class RootViewController: UIViewController {
         navigationItem.setRightBarButton(pushBarButtonItem, animated: false)
     }
 
-    @objc private func pushBarButtonItemTapped() {
-        let controller = SecondViewController()
-        navigationController?.pushViewController(controller, animated: true)
-    }
-    
-    @objc func messageBarButtonItemTapped() {
-       
-    }
-    
-    @objc private func resetBarButtonItemTapped() {
-        
-    }
-    
     private func setupViews() {
         view.backgroundColor = .white
         view.addSubview(label)
@@ -55,7 +42,28 @@ class RootViewController: UIViewController {
             label.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
     }
-
-
+    
+    @objc private func pushBarButtonItemTapped() {
+        let controller = SecondViewController()
+        controller.secondViewControllerView = self
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @objc func messageBarButtonItemTapped() {
+        label.text = "Root: Hello from the other side!"
+    }
+    
+    @objc private func resetBarButtonItemTapped() {
+        label.text = "Root: I am waiting for a message..."
+    }
 }
 
+extension RootViewController: SecondViewControllerView {
+    func didSendMessage(_ message: String) {
+        label.text = message
+    }
+    
+    func didSendOptionalMessage(_ message: String) {
+        label.text = message
+    }    
+}
